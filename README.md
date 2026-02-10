@@ -1,5 +1,5 @@
 
-# 404 Error Page - Aprendiendo Código
+# 404 Error Page 
 
 Este es un proyecto de práctica donde he desarrollado una página de error 404 personalizada. El objetivo principal fue dominar el uso de **Flexbox** y la implementación de **Diseño Responsivo (Mobile First)** para que la página se vea perfecta tanto en computadoras como en dispositivos móviles.
 
