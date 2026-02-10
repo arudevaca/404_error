@@ -18,12 +18,15 @@ h3 {
 }
 #big_container{
   display: flex;
-  width: 100%;  /* 100% del ancho de la ventana */
+  flex-direction: column;
+  width: 90%;  /* 100% del ancho de la ventana */
   height: 100%; /* 100% de la altura de la ventana */
   display: flex; 
   align-items: center;
-  padding-left: 50px;
+  padding: 20px;
+  gap: 20px;
 }
+
 p{
   font-family: monospace;
   font-weight: bold;
@@ -36,15 +39,15 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh; /* Altura del viewport */
+  min-height: 100vh; /* Altura del viewport */
 }
-
 #father_div0 {
   width: 100vw;  /* 100% del ancho de la ventana */
-  height: 100vh; /* 100% de la altura de la ventana */
-  overflow: hidden; 
+  min-height: 100vh; /* 100% de la altura de la ventana */
   display: flex; 
   align-items: center;
+  justify-content: center; /* Centra el contenido en general */
+  overflow-y: auto; /* IMPORTANTE: Permite scroll  */
 }
 #father_div1 {
   width: 100%;  /* 100% del ancho de la ventana */
@@ -55,7 +58,6 @@ button{
   font-family: monospace;
   color: white;
   background-color: #333333;
-
   display: block;
 }
 content{
@@ -66,4 +68,20 @@ button:hover{
 }
 a{
   text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  #big_container {
+    flex-direction: row; /* En PC se ponen de lado */
+    width: 100%;
+    padding-left: 50px;
+  }
+
+  h1 {
+    font-size: 40px; /* Tamaño grande para PC */
+  }
+
+  p {
+    padding-left: 50px; /* Recuperamos tu diseño original */
+  }
 }
